@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    height: 625px;
+    background: #565251;
+    /* background-color: #ffa384; */
+}
+.container1 {
+    width: 1080px;
+    height: 625px;
+    margin: 0 auto;
+    background-color: #fff;
+    background-image: url("jamia.jpg");
+}
+header img {
+    display: block;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+.container {
+    margin: 40px;
+    background-color: #fff;
+    width: auto;
+    height: auto;
+    border-radius: 10px;
+    padding-top: 20px;
+    position: relative;
+    top: -30px;
+    opacity: 0.6;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+form {
+    align-items: center;
+    text-align: center;
+}
+input {
+    width: 300px;
+    height: 60px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 17px;
+    padding-left: 20px;
+    padding-right: 10px;
+    font-size: 20px;
+}
+
+.submit input {
+    width: 200px;
+    font-size: 20px;
+    color: #fff;
+    letter-spacing: 1px;
+    background: #2d9d5f;
+    cursor: pointer;
+    margin: 40px;
+}
+
+.submit input:hover {
+    color: rgb(0, 0, 0);
+}
+.forget {
+    margin-top: 5px;
+    background-color: #fff;
+    width: auto;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: left;
+    margin-right: 10px;
+}
+.signup {
+    margin: 20px;
+    background-color: #fff;
+    width: auto;
+    height: 30px;
+    border-radius: 10px;
+    text-align: center;
+}
+form p{
+    font-size: 14px;
+    width: 240px;
+    color: red;
+  }
+.good{
+  color: #04AA6D;
+}

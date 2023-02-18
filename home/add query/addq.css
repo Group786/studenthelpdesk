@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #565251;
+}
+
+.popup {
+  background-color: #ffffff;
+  width: 550px;
+  padding: 30px 40px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  border-radius: 8px;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+}
+
+.popup button {
+  display: block;
+  margin: 0 0 20px auto;
+  background-color: transparent;
+  font-size: 30px;
+  color: #ffffff;
+  background: #03549a;
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.popup h2 {
+  margin-top: -20px;
+}
+
+.popup p {
+  font-size: 14px;
+  text-align: justify;
+  margin: 20px 0;
+  line-height: 25px;
+}
+
+#anc {
+  display: block;
+  width: 150px;
+  position: relative;
+  margin: 10px 380px;
+  text-align: center;
+  background-color: #0f72e5;
+  border-radius: 20px;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 8px 0;
+}
+
+.rule {
+  align-items: center;
+  border-bottom: 1px solid #000000;
+  border-left: 2px solid #000000;
+  display: flex;
+  margin: 20px 16px;
+  text-align: center;
+}
+
+.question {
+  background-color: rgb(5, 3, 3);
+  width: 550px;
+  height: 200px;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid black;
+}
+
+.question textarea {
+  box-sizing: border-box;
+  width: 100%;
+  box-shadow: none;
+  background-color: transparent;
+  padding: 0px;
+  outline: none;
+  border: none;
+  flex: 1 1 0%;
+  min-height: 200px;
+  max-height: 200px;
+  overflow: hidden;
+  overflow-wrap: break-word;
+  height: 26px;
+  font-size: x-large;
+}

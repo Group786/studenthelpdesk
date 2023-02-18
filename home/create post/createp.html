@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="createp.css">
+    <script src="createp.js"></script>
+    <title>Create new Item</title>
+
+</head>
+<body>
+    <div class="popup" id="pop">
+        <button id="close" onclick="closeForm()">&times;</button>
+        <h2>Create post </h2>
+        <div class="createpost">
+            <textarea placeholder="Write down what is your post about..."></textarea>
+        </div>
+        <div class="question">
+            <textarea placeholder="Start your question with 'What', 'How', 'Why', etc."></textarea>
+        </div>
+        <div class="rule"></div>
+        <div class="uploadpic">
+            <input type="file" id="img" name="img" accept="image/*">
+            <input type="submit" class="post" value="post">          
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="registration.css">
+    <script src="login.js"></script>
+    <script src="registration.js"></script>
+    <title>Registration</title>
+</head>
+<body>
+    <div class="container1">
+        <header>
+            <img src="logo.jpg" alt="JMILogo">
+        </header>
+        <div class="container">
+            <h1>Registration</h1>
+            <form action="registration.php" name="myform" class="form" id="form" method="post">
+                <input type="checkbox" id="student" name="student" value=true onchange="check('student')">
+                <label for="student"> Are you jamian</label><br>
+                <input id="name" type="text" placeholder="Name.." name="name" >
+                <input id="Email" type="email" placeholder="E-mail.." name="email" >
+                <input id="contact" type="number" placeholder="contact no.." name="contact" >
+                <input id="enrollment" type="number" placeholder="Enrollment no.." name="enrollment" >
+                <input id="password" type="password" placeholder="password.." name="password" >
+                <input id="Cpassword" type="password" placeholder="Confirm-password .." name="password" >
+                <div  class="submit">
+                    <input type="submit" name= "submit" value="register">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
