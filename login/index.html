@@ -15,11 +15,8 @@
         </header>
         <div class="container">
             <h1>Log In</h1>
-            <form action="" name="myform" class="form" id="form">
-                <div class="username">
-                    <input id="enrollment" type="number" placeholder="Enrollment no." name="enrollment" value=""><br>
-                    <p id="s_id"></p>
-                </div>
+            <form action="login.php" name="myform" class="form" id="form" method="post">
+                
                 <div class="email">
                     <input id="EMail" type="e-mail" placeholder="Email" name="EMail" onchange="validateEmail('EMail' , 'Emailid')"><br>
                     <p id="Emailid"></p>
@@ -31,7 +28,7 @@
                     <a class="forg" href="#">Forgot password?</a>
                 </div>
                 <div  class="submit">
-                    <input type="submit" value="login">
+                    <input type="submit" name="submit" value="login">
                 </div>
                 <div class="signup">
                     <a class="sign" href="/registration/">signup</a>
