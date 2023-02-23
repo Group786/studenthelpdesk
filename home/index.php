@@ -6,10 +6,7 @@ if(!isset($_SESSION['name'])){
     header("location: ../login/");
 }
 
-if(isset($_POST['qid'])){
-    $_SESSION['what'] = $_POST['qid'];
-    header("location: post.php");
-}
+
 
 ?>
 
@@ -128,8 +125,8 @@ if(isset($_POST['qid'])){
                         </button>
                     </div>
                     <div class="ansStatus cursor">
-                        <form action="" method="post">
-                            <button type="submit" name="qid" value="<?php echo $quest['id']?>">
+                        <form action="post.php" method="post">
+                            <button type="submit" name="qid" id="qid" value="<?php echo $quest['id']?>">
                                 <?php echo $count;?> Answer
                 </button>
                 </form>

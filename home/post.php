@@ -5,11 +5,12 @@ session_start();
 if(isset($_POST['qid'])){
     $qid = $_POST['qid'];
     $sqlq = "SELECT `query` FROM `query` where id = '$qid'";
-    $get = $db->query($sql);
+    $get = $db->query($sqlq);
     $quest = $get->fetch_assoc();
-    $sql = "SELECT `answer` FROM `answers` where qid = '$qid'";
+    $sql = "SELECT `id`,`answer` FROM `answers` where qid = '$qid'";
     $return = $db->query($sql);
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -69,33 +70,25 @@ if(isset($_POST['qid'])){
                 </div>
             </div>
             <!-- Right Box -->
-            <?php if($return->num_rows > 0){?>
             <div class="postContent">
-                <!-- Question 1 -->
-                    <?php while($anc = $return->fetch_assoc()) {?>
-                <div id="<?php echo $anc['id'];?>" class="question">
+            <?php 
+
+            if($return->num_rows > 0){
+                while($anc = $return->fetch_assoc()){
+                    ?>
+                <div id="<?php echo $anc['id']?>" class="question">
                     <div class="ques flex justifySb">
                         <div class="quest cursor">
                            <h4><?php echo $quest['query'];?></h4>
                         </div>
                     </div>
-                    <div><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, cum! Consequatur, et, natus minima soluta possimus amet voluptatibus cum aperiam voluptates explicabo perspiciatis aspernatur! Nisi ab esse recusandae corrupti laboriosam!
-                    Reprehenderit iste pariatur placeat veritatis debitis eligendi, quibusdam dicta, dolorem saepe aut tenetur esse. Cumque dolorum quos tempore, facere, mollitia est reprehenderit labore animi minus laborum facilis exercitationem temporibus sit!
-                    Autem, nihil odio dolorem velit qui unde eveniet deserunt quibusdam fugit omnis, rem nobis quos quam, labore fuga ea suscipit! In beatae perferendis dolor, ratione ullam deserunt laboriosam molestiae vel!
-                    Quisquam quos, aut repudiandae vitae ipsa, enim ad veniam optio esse mollitia quia illum nemo commodi voluptate repellendus, ratione aliquid autem quod adipisci officiis ipsum ab corrupti ducimus! Iure, aspernatur?
-                    Molestias, assumenda deleniti ut labore aperiam iste quia velit veritatis quos consequatur officiis exercitationem laboriosam quibusdam aspernatur quam tempora aliquid, et distinctio quo, sit ea asperiores maxime porro. Quibusdam, est.
-                    Magnam omnis, dignissimos incidunt deserunt eligendi ipsa quos rem voluptate non minima eum odit, facilis repellat harum neque adipisci nostrum? Placeat deserunt laboriosam sed, quibusdam cum voluptas molestiae dignissimos odit?
-                    Commodi delectus quis enim. Illum distinctio enim facere veniam, asperiores temporibus veritatis ex, soluta, cupiditate perferendis dolor sed sapiente atque incidunt exercitationem repudiandae quod reiciendis assumenda quibusdam. Consequuntur, itaque nulla?
-                    Saepe dolores culpa consequuntur tempore ullam vitae atque dolor voluptatibus consectetur rerum perferendis sint ab, doloribus error necessitatibus, ipsum sunt, provident ratione optio tempora pariatur exercitationem eius porro odio? Ratione.
-                    Neque nemo quod omnis! Officia fugiat molestiae ex quae dicta similique ullam illum molestias, ducimus veniam minima recusandae culpa aut modi porro quaerat ipsa ipsam, nisi explicabo eius delectus eveniet!
-                    Maxime libero est deleniti ipsam animi veniam rem cum rerum aspernatur modi quidem, perferendis ab ex in reiciendis reprehenderit cumque possimus ullam laboriosam excepturi expedita alias! Voluptatibus exercitationem sed vero?
-                    Laudantium aperiam ducimus, reiciendis impedit error voluptatibus nisi, modi iusto, necessitatibus quisquam eum id dolorum possimus deserunt eveniet quae vel! Amet, voluptas enim soluta aut quasi temporibus iste incidunt corrupti.
-                    Error, recusandae qui voluptatem, nisi, eos dicta mollitia repellat explicabo magnam ab placeat a excepturi odit soluta adipisci quia laboriosam fugit voluptate ipsa deleniti alias unde ducimus! Quisquam, eum dolore.
-                    Illum in ut voluptatum enim molestiae sint facere, eius aliquam neque laudantium soluta maxime temporibus voluptas quae quas, eligendi ad cupiditate suscipit harum ullam magnam quos voluptate. Hic, voluptate maiores!
-                    Similique officia excepturi ex reprehenderit animi ratione. Blanditiis laboriosam mollitia cupiditate quo a minima ipsum error nulla tenetur, veritatis voluptatibus ullam eius autem totam praesentium voluptatem impedit dicta ex. Animi!
-                    Vero animi commodi eligendi magni velit deserunt? Corporis omnis cumque totam ab quae numquam, error in aliquam vitae voluptate deserunt praesentium est facere earum quaerat impedit placeat quisquam culpa iste.</p></div>
+                    <div id="p">
+                        <p>
+                        <?php echo $anc['answer']?>
+                        </p>
+                    </div>
                     <div class="Answer flex alignC justifySb">
-                        <button onclick="hide('<?php echo $anc['id']; ?>')" class="hide cursor">
+                        <button onclick="hide('<?php echo $anc['id']?>')" class="hide cursor">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                                 class="bi bi-x" viewBox="0 0 16 16">
                                 <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
@@ -110,9 +103,13 @@ if(isset($_POST['qid'])){
                     </div>
                     
                 </div>
-                <?php}?>
+                <?php
+             }
+             }
+          
+             ?>
             </div>
-            <?php}?>
+          
         </div>
     </div>
 </body>
