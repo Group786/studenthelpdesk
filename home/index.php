@@ -49,8 +49,8 @@ if(!isset($_SESSION['name'])){
                     <div class="dropdown">
                         <input class="dropbtn cursor" type="button" value="Add Query">
                         <div class="dropdown-content">
-                            <a href="./add query/addq.php">Add query</a>
-                            <a href="./create post/createp.html">Create post</a>
+                            <a href="./add_query/addq.php">Add query</a>
+                            <a href="./create_post/createp.html">Create post</a>
                         </div>
                     </div>
                 </div>
