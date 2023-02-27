@@ -4,7 +4,7 @@
 if(isset($_POST['query'])){
     $id = generateRandomString();
     $q = $_POST['quest'];
-    $sql = "INSERT INTO `query`(`id`, `query`) VALUES ('$id','$q')";
+    $sql = "INSERT INTO `query`(`id`, `query`,`flag`) VALUES ('$id','$q',true)";
     $return = $db->query($sql);
     if ($return) {
         header("location: ../");

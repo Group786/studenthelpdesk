@@ -83,7 +83,7 @@ header img {
     color: #fff;
     border: none;
     padding: 8px 20px;
-    border-radius: 30px;
+    /* border-radius: 30px; */
     font-size: 16px;
 }
 
@@ -120,16 +120,6 @@ header img {
 .dropdown:hover .dropbtn {
     background-color: #058d4b;
 }
-
-/* .button :hover {
-    background-color: #066a3a;
-} */
-
-
-/* above Code for header */
-
-
-/* below Code for Content */
 
 .content {
     margin: 0 auto;
@@ -301,7 +291,7 @@ header img {
     font-size: 16px;
     color: #282829;
     font-weight: 700;
-    height: 115px;
+    height: 100px;
     display: block;
 }
 
@@ -383,15 +373,3 @@ header img {
 .dot {
     height: 26px;
 }
-.hid{
-    display: none;
-    float:left;
-
-}
-.show{
-    display:block;
-    float:left;
-
-}
-
-

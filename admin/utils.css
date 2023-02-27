@@ -1,0 +1,15 @@
+.flex{
+    display: flex;
+}
+
+.alignC{
+    align-items: center;
+}
+
+.cursor{
+    cursor: pointer;
+}
+
+.justifySb{
+    justify-content: space-between;
+}

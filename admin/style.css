@@ -83,7 +83,7 @@ header img {
     color: #fff;
     border: none;
     padding: 8px 20px;
-    border-radius: 30px;
+    /* border-radius: 30px; */
     font-size: 16px;
 }
 
@@ -383,15 +383,3 @@ header img {
 .dot {
     height: 26px;
 }
-.hid{
-    display: none;
-    float:left;
-
-}
-.show{
-    display:block;
-    float:left;
-
-}
-
-

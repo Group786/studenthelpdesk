@@ -83,7 +83,7 @@ header img {
     color: #fff;
     border: none;
     padding: 8px 20px;
-    border-radius: 30px;
+    /* border-radius: 30px; */
     font-size: 16px;
 }
 
@@ -120,16 +120,6 @@ header img {
 .dropdown:hover .dropbtn {
     background-color: #058d4b;
 }
-
-/* .button :hover {
-    background-color: #066a3a;
-} */
-
-
-/* above Code for header */
-
-
-/* below Code for Content */
 
 .content {
     margin: 0 auto;
@@ -301,7 +291,7 @@ header img {
     font-size: 16px;
     color: #282829;
     font-weight: 700;
-    height: 115px;
+    height: auto;
     display: block;
 }
 
@@ -318,25 +308,6 @@ header img {
     background-color: transparent;
     padding: 6px;
     border-radius: 50px;
-}
-
-#cut {
-    height: 24px;
-}
-
-.hide:hover {
-    background-color: rgb(245, 245, 245);
-}
-
-.ansStatus {
-    font-size: 13px;
-    color: #939598;
-    width: 90px;
-    height: 18.2px;
-}
-
-.ansStatus:hover {
-    text-decoration: underline;
 }
 
 .Answer {
@@ -383,15 +354,3 @@ header img {
 .dot {
     height: 26px;
 }
-.hid{
-    display: none;
-    float:left;
-
-}
-.show{
-    display:block;
-    float:left;
-
-}
-
-

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 21, 2023 at 10:29 AM
+-- Generation Time: Feb 27, 2023 at 07:58 PM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -31,15 +31,19 @@ CREATE TABLE `answers` (
   `id` varchar(9) NOT NULL,
   `qid` varchar(6) NOT NULL,
   `email` tinytext NOT NULL,
-  `answer` longtext NOT NULL
+  `answer` longtext NOT NULL,
+  `flag` tinyint(1) NOT NULL,
+  `view` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `answers`
 --
 
-INSERT INTO `answers` (`id`, `qid`, `email`, `answer`) VALUES
-('Sji3vokDb', 'oSBu26', 'fahadansari6913@gmail.com', 'I dont know');
+INSERT INTO `answers` (`id`, `qid`, `email`, `answer`, `flag`, `view`) VALUES
+('CARo2uGIs', 'x40mzK', 'fahadansari6913@gmail.com', 'You can Pause or Resume study your any time and anywhere', 1, 0),
+('drdSD5wj5', 'oSBu26', '', 'Firstly you have make fir complaint', 1, 1),
+('qZY5Q69pe', 'oSBu26', '', 'qwerty', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -49,19 +53,42 @@ INSERT INTO `answers` (`id`, `qid`, `email`, `answer`) VALUES
 
 CREATE TABLE `query` (
   `id` varchar(6) NOT NULL,
-  `query` mediumtext NOT NULL
+  `query` mediumtext NOT NULL,
+  `flag` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `query`
 --
 
-INSERT INTO `query` (`id`, `query`) VALUES
-('4dTvYy', 'What are the procedure for hostel allotment?'),
-('Kg0QiC', 'who is vc of jamia'),
-('NJZKuh', ' What are the procedure for registeration of JMI Wi-Fi?'),
-('oSBu26', ' My JMI ID Card have been losted, What should I do know?'),
-('zkoYjA', 'when will be will open \r\n');
+INSERT INTO `query` (`id`, `query`, `flag`) VALUES
+('4dTvYy', 'What are the procedure for hostel allotment?', 1),
+('Kg0QiC', 'who is vc of jamia', 1),
+('NJZKuh', ' What are the procedure for registeration of JMI Wi-Fi?', 1),
+('oSBu26', ' My JMI ID Card have been losted, What should I do know?', 1),
+('x40mzK', 'What are benefits for ABC ID', 1),
+('zkoYjA', 'when will be will open \r\n', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `report`
+--
+
+CREATE TABLE `report` (
+  `id` varchar(9) NOT NULL,
+  `u_id` mediumtext NOT NULL,
+  `q_id` varchar(6) NOT NULL,
+  `status` tinyint(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `report`
+--
+
+INSERT INTO `report` (`id`, `u_id`, `q_id`, `status`) VALUES
+('JUB4zlfZH', 'fahadansari6913@gmail.com', 'oSBu26', 1),
+('Yi3MDBZR8', 'fahadansari6913@gmail.com', 'x40mzK', 0);
 
 -- --------------------------------------------------------
 
@@ -116,6 +143,12 @@ ALTER TABLE `answers`
 -- Indexes for table `query`
 --
 ALTER TABLE `query`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `report`
+--
+ALTER TABLE `report`
   ADD PRIMARY KEY (`id`);
 
 --
