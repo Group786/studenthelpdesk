@@ -80,19 +80,11 @@ if(!isset($_SESSION['name'])){
                         <div class="user">
                             <img src="./images/user.png" alt="user">
                         </div>
-                        <div class="askShare flex alignC cursor">
-                            <div class="whatadq">What do you want to ask or share?</div>
-                        </div>
+                        <a style="text-decoration:none" href="./add_query/addq.php" class="askShare flex alignC cursor">
+                            <div class="whatadq">What do you want to ask?</div>
+                        </a>
                     </div>
-                    <div class="aap flex alignC">
-                        <div class="aapItems flex"><button class="cursor">Ask</button>
-                            <div></div>
-                        </div>
-                        <div class="aapItems flex"><button class="cursor">Answer</button>
-                            <div></div>
-                        </div>
-                        <div class="aapItems flex"><button class="cursor">Post</button></div>
-                    </div>
+                   
                 </div>
                 <div class="qfu flex alignC justifySb">
                     <div class="wrapqfu flex alignC">

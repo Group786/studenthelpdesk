@@ -47,7 +47,7 @@ if(isset($_POST['check'])){
                     <ul>
                         <li><a href="reported_question.php">Reported Question</a></li>
                         <li><a href="post_verification.php">Post verification</a></li>
-                        <li><a href="#ExamQ">Log Out</a></li>
+                        <!-- <li><a href="#ExamQ">Log Out</a></li> -->
                     </ul>
                 </div>
             </div>
@@ -60,7 +60,7 @@ if(isset($_POST['check'])){
                     <div class="ques flex justifySb">
                         <div class="quest cursor">
 
-                           <a href="post.html"><h4><?php echo $row['query']?></h4></a>
+                           <h4><?php echo $row['query']?></h4>
                            
                            <button onclick="check('<?php echo $row['qid']?>')">CHECK</button>
                         </div>
@@ -68,20 +68,20 @@ if(isset($_POST['check'])){
                 </div>
                 <?php
                 }?>
-                <div  class="question">
-                    <div class="ques flex justifySb">
-                        <div class="quest cursor">
+                <?php
+            }else{
+            ?>
+            <div  class="question">
+                <div class="ques flex justifySb">
+                    <div class="quest cursor">
 
-                        <h4>No Post available for verification</h4>
-                           
-                           
-                        </div>
+                    <h4>No Answers available for verification</h4>
+                       
+                       
                     </div>
                 </div>
-                <?php
-            }
-            ?>
-               
+            </div>
+               <?php }?>
             </div>
         </div>
     </div>
